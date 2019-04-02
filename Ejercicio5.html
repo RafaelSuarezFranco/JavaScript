@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            var grados = prompt("Introduce grados fahrenheit");
+           $("#celsius").html("En celsius son: " + ((grados - 32)*5/9));
+
+        });
+
+    </script>
+
+
+</head>
+
+<body>
+    <p id="celsius">
+    </p>
+    </body>
+
+</html>

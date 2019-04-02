@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+            $("#calcular").click(function(){
+                var parcial1 = $("#parcial1-input").val();
+                var parcial2 = $("#parcial2-input").val();
+                var parcial3 = $("#parcial3-input").val();
+                var examen = $("#exfinal-input").val();
+                var trabajo = $("#trabfinal-input").val();
+                var nota = ((parcial1*1+parcial2*1+parcial3*1)*0.55/3 + examen*0.3 +trabajo*0.15);
+                $("#output").html("su nota es " + nota);
+            });
+        
+        });
+
+    </script>
+
+<style>
+        * {font-size: 100%;
+        padding: 1px;
+        margin: 1px;}
+        h2 {font-size: 200%;}
+        </style>
+        
+</head>
+
+<body>
+    <h2> introduzca sus notas por favor</h4>
+    <h6>parcial 1:</h6>
+    <input id="parcial1-input" type="text">
+    <h6>parcial 2:</h6>
+    <input id="parcial2-input" type="text">
+    <h6>parcial 3:</h6>
+    <input id="parcial3-input" type="text">
+    <h6>examen final:</h6>
+    <input id="exfinal-input" type="text">
+    <h6>trabajo final:</h6>
+    <input id="trabfinal-input" type="text">
+    <hr>
+    <button id="calcular">calcular nota final</button>
+    <p id="output"></p>
+    </body>
+
+</html>

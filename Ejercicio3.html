@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            var lado1 = prompt("Introduce un cateto del triángulo");
+            var lado2 = prompt("Introduce el otro cateto del triágulo");
+            $("#hipotenusa").html("La hipotenusa del triángulo es " + (Math.sqrt(Math.pow(lado1,2)+Math.pow(lado2,2)) )) ;
+ 
+            // Math.sqrt(x) devuelve la raiz de x
+            // Math.pow(x,y) devuelve x elevado a y
+ });
+
+    </script>
+
+
+</head>
+
+<body>
+    <p id="hipotenusa"></p>
+</body>
+
+</html>

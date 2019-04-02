@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+            $("#calcular").click(function(){
+                var total = $("#total-input").val();
+                $("#output").html("usted pagará " + (total*0.85) + " euros");
+            });
+        
+        });
+
+    </script>
+
+
+</head>
+
+<body>
+    <h1>CALCULADORA DE DESCUENTO</h1>
+    <input id="total-input" type="text">
+    <button id="calcular">calcular con descuento</button>
+    <p id="output"></p>
+    </body>
+
+</html>

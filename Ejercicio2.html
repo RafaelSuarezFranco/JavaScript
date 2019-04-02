@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            var base = prompt("Introduce la base del rectángulo");
+            var altura = prompt("Introduce la altura del rectángulo");
+            $("#perimetro").html("El perímetro es " + ((base*2) + (altura*2)) ) ;
+            $("#area").html("El área es " + (base*altura) ) ;
+        });
+
+    </script>
+
+
+</head>
+
+<body>
+    <p id="perimetro"></p>
+    <p id="area"></p>
+</body>
+
+</html>

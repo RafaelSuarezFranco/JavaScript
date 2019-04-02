@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+            $("#calcular").click(function(){
+                var numero = $("#minutos-input").val();
+                var minutos = numero%60;
+                var horas = Math.round(numero/60);
+                $("#output").html("horas: " + horas + ", minutos: " +minutos)
+            });
+        
+        });
+
+    </script>
+
+
+</head>
+
+<body>
+    <input id="minutos-input" type="text">
+    <button id="calcular">convertir</button>
+    <p id="output"></p>
+    </body>
+
+</html>
