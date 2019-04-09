@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+            $("#calcular").click(function(){
+                var numero1 = $("#numero1-input").val();
+                var numero2 = $("#numero2-input").val();
+                var distancia = ((numero1*1)-(numero2*1));
+                $("#output").html("La distancia entre los números es " + Math.abs(distancia));
+            });
+        
+        });
+
+    </script>
+
+<style>
+        * {font-size: 100%;
+        padding: 1px;
+        margin: 1px;}
+        h2 {font-size: 200%;}
+        </style>
+        
+</head>
+
+<body>
+    <h6>numero 1:</h6>
+    <input id="numero1-input" type="text">
+    <h6>numero 2:</h6>
+    <input id="numero2-input" type="text">
+    <hr>
+    <button id="calcular">calcular distancia</button>
+    <p id="output"></p>
+    </body>
+
+</html>

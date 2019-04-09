@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+            $("#calcular").click(function(){
+                var A = $("#a-input").val();
+                var B = $("#b-input").val(); 
+                var a2 = A
+                var b2 = B
+                var B = a2
+                var A = b2
+                $("#output").html("Variable A: "+ A + ". Variable B: " + B);
+            });
+
+        });
+
+    </script>
+
+<style>
+        * {font-size: 100%;
+        padding: 1px;
+        margin: 1px;}
+        h2 {font-size: 200%;}
+        </style>
+        
+</head>
+
+<body>
+    <h6>numero A:</h6>
+    <input id="a-input" type="text">
+    <h6>numero B:</h6>
+    <input id="b-input" type="text">
+    <hr>
+    <button id="calcular">intercambiar valores</button>
+    <p id="output"></p>
+    </body>
+
+</html>

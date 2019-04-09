@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+            $("#calcular").click(function(){
+                var km = $("#km-input").val();
+                var v1 = $("#v1-input").val(); 
+                var v2 = $("#v2-input").val(); 
+                var tiempo = km/(v1*1-v2*1)
+                $("#output").html("tiempo en horas: " +tiempo);
+            });
+
+        });
+
+    </script>
+
+<style>
+        * {font-size: 100%;
+        padding: 1px;
+        margin: 1px;}
+        h2 {font-size: 200%;}
+        </style>
+        
+</head>
+
+<body>
+    <h6>Distancia en km:</h6>
+    <input id="km-input" type="text">
+    <h6>Velocidad vehiculo rapido:</h6>
+    <input id="v1-input" type="text">
+    <h6>Velocidad vehiculo lento:</h6>
+    <input id="v2-input" type="text">
+    <hr>
+    <button id="calcular">calcular tiempo</button>
+    <p id="output"></p>
+    </body>
+
+</html>

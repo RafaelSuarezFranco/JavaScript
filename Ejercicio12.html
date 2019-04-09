@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+            $("#calcular").click(function(){
+                var x1 = $("#x1-input").val();
+                var y1 = $("#y1-input").val();
+                var x2 = $("#x2-input").val();
+                var y2 = $("#y2-input").val();    
+                var distanciax = Math.abs((x1*1)-(x2*1));
+                var distanciay = Math.abs((y1*1)-(y2*1));
+                var distancia = (Math.sqrt(Math.pow(distanciax,2)+Math.pow(distanciay,2))) ;
+                $("#output").html("La distancia entre los puntos (x1,y1) y (x2,y2) es "+(distancia));
+            });
+        
+        });
+
+    </script>
+
+<style>
+        * {font-size: 100%;
+        padding: 1px;
+        margin: 1px;}
+        h2 {font-size: 200%;}
+        </style>
+        
+</head>
+
+<body>
+    <h6>x 1:</h6>
+    <input id="x1-input" type="text">
+    <h6>y 1:</h6>
+    <input id="y1-input" type="text">
+    <h6>x 2:</h6>
+    <input id="x2-input" type="text">
+    <h6>y 2:</h6>
+    <input id="y2-input" type="text">
+    <hr>
+    <button id="calcular">calcular distancia</button>
+    <p id="output"></p>
+    </body>
+
+</html>

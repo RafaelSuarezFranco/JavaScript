@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+            $("#calcular").click(function(){
+                var corr = $("#c-input").val();
+                var incorr = $("#i-input").val(); 
+                var blanco = $("#b-input").val(); 
+                var nota = corr*5 -1*incorr + 0*blanco;
+                var notamaxima = (corr*1+incorr*1+blanco*1)*5;
+                $("#output").html("nota = " + nota + " sobre " + notamaxima);
+            });
+
+        });
+
+    </script>
+
+<style>
+        * {font-size: 100%;
+        padding: 1px;
+        margin: 1px;}
+        h2 {font-size: 200%;}
+        </style>
+        
+</head>
+
+<body>
+    <h6>correctas:</h6>
+    <input id="c-input" type="text">
+    <h6>incorrectas:</h6>
+    <input id="i-input" type="text">
+    <h6>en blanco:</h6>
+    <input id="b-input" type="text">
+    <hr>
+    <button id="calcular">nota examen</button>
+    <p id="output"></p>
+    </body>
+
+</html>
