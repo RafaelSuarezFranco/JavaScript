@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script>
+
+        $(document).ready(function () {
+
+            $("#btn-add-row").click(function () {
+                $("tr:last-child").remove();
+                $("table").append("<tr><td>" +$("#art").val()+"</td>" +
+                    "<td class=" + "precio" + ">" +$("#pre").val()+"</td>" +
+                    "<td class=" + "unidad" + ">" +$("#uni").val()+"</td>" +
+                    "<td class=" + "td2" + ">" +$("#tot").val()+"</td></tr>")
+                $("table").append("<tr><td>Total</td>"+
+                   " <td></td>"+
+                    "<td></td>"+
+                    "<td>Total</td></tr>")
+// nota: si se quitan las dos filas siguientes, el botón de añadir fila hará la función de los dos botones
+            });
+            
+            $("#calcular").click(function () {
+                $("tr:last-child td:last-child").html("")
+
+                $(".td2").each(function () {
+                    var p = $(this).siblings(".precio").text()
+                    var u = $(this).siblings(".unidad").text()
+                    $(this).text(p * u)
+
+                    var sumatorio = p * u
+                    $("tr:last-child td:last-child").text(1 * ($("tr:last-child td:last-child").text()) + sumatorio)
+                });
+
+
+            });
+
+
+        });
+    </script>
+    <style>
+
+        table,
+        th,
+        td {
+            border-collapse: collapse;
+            border: 2px solid black;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+    <p>Artículo:</p>
+    <input type="text" id="art"></input>
+    <p>precio</p>
+    <input type="text" id="pre"></input>
+    <p>unidades</p>
+    <input type="text" id="uni"></input>
+    <p>Total:</p>
+    <input type="text" id="tot"></input>
+</div>
+    <br>
+    <button id="btn-add-row">Añadir fila al final</button>
+
+    <table>
+        <tr>
+            <th>Artículo</th>
+            <th>Precio unitario</th>
+            <th>Unidades</th>
+            <th>Precio total</th>
+        </tr>
+        <tr>
+            <td>Ordenador</td>
+            <td class="precio">600</td>
+            <td class="unidad">2</td>
+            <td class="td2">x</td>
+        </tr>
+        <tr>
+            <td>Móvil</td>
+            <td class="precio">200</td>
+            <td class="unidad">4</td>
+            <td class="td2">y</td>
+        </tr>
+        <tr>
+            <td>Tablet</td>
+            <td class="precio">400</td>
+            <td class="unidad">7</td>
+            <td class="td2">z</td>
+        </tr>
+
+        <tr>
+            <td>Total</td>
+            <td></td>
+            <td></td>
+            <td>Total</td>
+        </tr>
+    </table>
+    <button id="calcular">calcular</button>
+</body>
+
+</html>
