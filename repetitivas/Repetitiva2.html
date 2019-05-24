@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+        #output {
+            border: 2px solid green;
+        }
+    </style>
+<script>
+
+$(document).ready(function() {
+
+    var numeroADescubrir = parseInt(Math.random() * 100);
+    var intentos = 0;
+    var hasganado = false;
+
+    while (intentos < 10 && hasganado == false) {
+        var numeroEscrito = prompt("Escribe un número (intento " + intentos + "):");
+
+        if (numeroEscrito < numeroADescubrir) {
+            alert("Has escrito un número menor");
+            intentos++;
+        }
+        else if (numeroEscrito > numeroADescubrir) {
+            alert("Has escrito un número mayor");
+            intentos++;
+        }
+        else {
+            alert ("¡¡HAS ACERTADO!!");
+            hasganado = true;
+        }
+    }
+
+    if (hasganado) {
+        $("#output").html("FIN: has acertado el número:" + numeroADescubrir);
+    }
+    else {
+        $("#output").html("FIN: has perdido. has superado el número de intentos");
+    }
+});
+
+</script>
+
+</head>
+
+<body>
+    <p id="output"></p>
+</body>
+</html>

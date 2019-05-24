@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function() {
+
+    var factorial = prompt("Número del factorial:");
+    var resultado = 1;
+
+    for (var i = 1; i <= factorial; i++) {
+
+        resultado = resultado * i;
+
+        $("#output").append("<br/> Vuelta"
+                + i + ". Resultado: " + resultado);
+    }
+
+    $("#output").append("<br/>FIN");
+
+});
+
+
+</script>
+
+</head>
+<body>
+    <h2>Salida del programa</h2>
+    <p id="output"></p>
+    
+</body>
+</html>

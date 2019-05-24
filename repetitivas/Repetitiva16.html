@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #output {
+            border: 2px solid green;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            var n = prompt("Numero de empleados");
+            var horas = prompt("horas semanales de cada empleado");
+            var sueldo = prompt("introduzca salario (por hora)");
+            var i = 1;
+            var total = 0;
+            while (i <= n) {
+                var total = total + horas * sueldo;
+                i++;
+            }
+            $("#output").html("hay "+n +"empleados, a cada cual se le paga " + horas*sueldo + " entre todos cobran "+total);
+        });
+    </script>
+
+
+</head>
+
+<body>
+
+    <h2>Salida</h2>
+    <p id="output"></p>
+
+
+</body>
+
+</html>

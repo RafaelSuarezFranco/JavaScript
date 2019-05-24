@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+            $("#submit").click(function () {
+
+                var lim1 = $("#1-input").val();
+                var lim2 = $("#2-input").val();
+                if (lim1 > lim2) {
+                    $("#output").html("no valen esos valores")
+                } else {
+                    var num = parseInt(prompt("introduzca numero"));
+                    var suma = 0;
+                    var contador = 0;
+                    var iguales = 0;
+                    while (num != 0) {
+                        if (num > lim1 && num < lim2) {
+                            var suma = (suma*1 + num*1);
+                        } else {
+                            if (num < lim1 || num > lim2) {
+                                contador++
+                            } else {
+                                $("#output").append("<br/> has introducido un valor igual a un límite, " + num +"<br/>")
+                            }
+                        }
+                        var num = prompt("introduzca numero");
+                    }
+                    $("#output").append("suma = "+suma+", numeros fuera del límite = "+contador)
+                }
+
+            });
+
+        });
+
+    </script>
+
+    <style>
+        * {
+            font-size: 100%;
+            padding: 1px;
+            margin: 1px;
+        }
+
+        h2 {
+            font-size: 200%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h6>limite inferior</h6>
+    <input id="1-input" type="text">
+    <h6>limite superior</h6>
+    <input id="2-input" type="text">
+
+
+    <hr>
+    <button id="submit">calcular</button>
+    <p id="output"></p>
+</body>
+
+</html>
