@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+            $("#calcular").click(function(){
+                var numero = $("#numero-input").val();
+                var numerodec = (numero%10);
+                var numerouni = ((numero*1-numerodec*1)/10);
+                $("#output").html("Numero invertido: " + numerodec+numerouni);
+            });
+        
+        });
+
+    </script>
+
+<style>
+        * {font-size: 100%;
+        padding: 1px;
+        margin: 1px;}
+        h2 {font-size: 200%;}
+        </style>
+        
+</head>
+
+<body>
+    <h6>numero 2 cifras</h6>
+    <input id="numero-input" type="text">
+    <hr>
+    <button id="calcular">invertir</button>
+    <p id="output"></p>
+    </body>
+
+</html>

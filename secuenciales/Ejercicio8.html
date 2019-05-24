@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+
+
+            $("#calcular").click(function () {
+                var venta1 = prompt("Introduce venta 1");
+                var venta2 = prompt("Introduce venta 2");
+                var venta3 = prompt("Introduce venta 3");
+                var sueldo = $("#sueldobase-input").val();
+                var comisiones = ((venta1 * 1 + venta2 * 1 + venta3 * 1)*0.1 );
+                var total = (comisiones * 1 + sueldo * 1);
+                $("#output").html("este mes vas a cobrar " + total + " euros");
+            });
+
+        });
+
+    </script>
+
+
+</head>
+
+<body>
+    <p>sueldo base</p>
+    <input id="sueldobase-input" type="text">
+    <button id="calcular">calcular</button>
+    <p>resultado:</p>
+    <p id="output"></p>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+            $("#calcular").click(function(){
+                var hora = $("#h-input").val();
+                var minuto = $("#m-input").val(); 
+                var segundo = $("#s-input").val(); 
+                var tiempo = $("#t-input").val();
+                var sumahora = Math.round(tiempo/3600);
+                var sumaminuto = Math.round((tiempo/60)%60);
+                var sumasegundo = Math.round(tiempo%60);
+                var minutollegada = (minuto*1+sumaminuto*1);
+                var horallegada = (hora*1+sumahora*1);
+                var segundollegada = (segundo*1+sumasegundo*1);
+                $("#output").html("hora llegada: " + horallegada + ". minuto llegada: " + minutollegada
+                + ". segundo llegada: " + segundollegada);
+            });
+
+        });
+
+    </script>
+
+<style>
+        * {font-size: 100%;
+        padding: 1px;
+        margin: 1px;}
+        h2 {font-size: 200%;}
+        </style>
+        
+</head>
+
+<body>
+    <h6>hora salida:</h6>
+    <input id="h-input" type="text">
+    <h6>minuto salida:</h6>
+    <input id="m-input" type="text">
+    <h6>segundo salida:</h6>
+    <input id="s-input" type="text">
+    <h6>segundos que tarda en llegar:</h6>
+    <input id="t-input" type="text">
+    <hr>
+    <button id="calcular">calcular hora llegada</button>
+    <p id="output"></p>
+    </body>
+
+</html>

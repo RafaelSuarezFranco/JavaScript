@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+            $("#calcular").click(function(){
+                var nombre = $("#n-input").val();
+                var ap1 = $("#1-input").val(); 
+                var ap2 = $("#2-input").val(); 
+                var i1 = nombre.charAt(0);
+                var i2 = ap1.charAt(0);
+                var i3 = ap2.charAt(0);
+                $("#output").html("iniciales: " + i1 + i2 + i3);
+            });
+
+        });
+
+    </script>
+
+<style>
+        * {font-size: 100%;
+        padding: 1px;
+        margin: 1px;}
+        h2 {font-size: 200%;}
+        </style>
+        
+</head>
+
+<body>
+    <h6>nombre:</h6>
+    <input id="n-input" type="text">
+    <h6>apellido 1:</h6>
+    <input id="1-input" type="text">
+    <h6>apellido 2:</h6>
+    <input id="2-input" type="text">
+    <hr>
+    <button id="calcular">iniciales</button>
+    <p id="output"></p>
+    </body>
+
+</html>

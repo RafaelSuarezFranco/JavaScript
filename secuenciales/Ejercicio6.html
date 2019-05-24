@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            var numero1 = prompt("Introduce número 1");
+            var numero2 = prompt("Introduce número 2");
+            var numero3 = prompt("Introduce número 3");
+           $("#media").html("La media es: " + parseInt((numero1*1 + numero2*1 + numero3*1)/3));
+
+        });
+
+    </script>
+
+
+</head>
+
+<body>
+    <p id="media">
+    </p>
+    </body>
+
+</html>
