@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+            $("#submit").click(function(){
+                var nota = $("#1-input").val();
+                var edad = $("#2-input").val(); 
+                var sexo = $("#3-input").val(); 
+                if (nota >=5 && edad >= 18) {
+                    if (sexo == "F") {
+                        $("#output").html("ACEPTADA");
+                    } else {
+                        if (sexo == "M") {
+                            $("#output").html("POSIBLE");
+                        } else {
+                            $("#output").html("ese sexo no existe");
+                        }
+                    }
+                    
+                } else {
+                    $("#output").html("RECHAZADA");
+                }
+           
+            });
+
+        });
+
+    </script>
+
+<style>
+        * {font-size: 100%;
+        padding: 1px;
+        margin: 1px;}
+        h2 {font-size: 200%;}
+        </style>
+        
+</head>
+
+<body>
+    <h6>nota</h6>
+    <input id="1-input" type="text">
+    <h6>edad</h6>
+    <input id="2-input" type="text">
+    <h6>sexo</h6>
+    <input id="3-input" type="text">
+
+
+    <hr>
+    <button id="submit">calcular</button>
+    <p id="output"></p>
+    </body>
+
+</html>

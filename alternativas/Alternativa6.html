@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+            $("#submit").click(function(){
+                var cadena = $("#1-input").val();
+
+                if (cadena == cadena.toUpperCase()) {
+            alert ("letra mayuscula");
+        }
+        if (cadena == cadena.toLowerCase()){
+            alert ("letra minuscula");
+        }
+
+            });
+
+        });
+
+    </script>
+
+<style>
+        * {font-size: 100%;
+        padding: 1px;
+        margin: 1px;}
+        h2 {font-size: 200%;}
+        </style>
+        
+</head>
+
+<body>
+    <h6>cadena:</h6>
+    <input id="1-input" type="text">
+
+
+    <hr>
+    <button id="submit">comprobar mayuscula</button>
+    <p id="output"></p>
+    </body>
+
+</html>

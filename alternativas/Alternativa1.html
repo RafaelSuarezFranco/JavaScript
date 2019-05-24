@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            var num1 = prompt("introduce numero 1");
+            var num2 = prompt("introduce numero 2");
+            $("#message").html("Primer número: " +num1 + ". Segundo número: " + num2);
+            
+            var comp;
+
+            if(num1 > num2){
+            comp = true;   
+            }
+            else{
+                comp = false;
+            }
+            
+            $("#output").html( "numero1 mayor que numero2? " + comp);
+
+        });
+
+    </script>
+
+
+</head>
+
+<body>
+        <p id="message"></p>
+    <p id="output"></p>
+</body>
+
+</html>

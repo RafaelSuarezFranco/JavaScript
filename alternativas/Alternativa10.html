@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            $("#submit").click(function () {
+                var x1 = $("#1-input").val();
+                var y1 = $("#2-input").val();
+                var r1 = $("#3-input").val();
+                var x2 = $("#4-input").val();
+                var y2 = $("#5-input").val();
+                var r2 = $("#6-input").val();
+
+                var distanciax = Math.abs((x1 * 1) - (x2 * 1));
+                var distanciay = Math.abs((y1 * 1) - (y2 * 1));
+                var distancia = (Math.sqrt(Math.pow(distanciax, 2) + Math.pow(distanciay, 2)));
+
+                if (r1 * 1 + r2 * 1 < distancia * 1) {
+                    $("#output").html("exteriores");
+                } else {
+
+                    if (distancia * 1 == 0) {
+                        $("#output").html("concentricas");
+                    }
+
+
+                    else {
+                        if (r1 * 1 == r2 * 1 + distancia * 1) {
+                            $("#output").html("tangentes interiores");
+                        } else {
+                            if (r2 * 1 == r1 * 1 + distancia * 1) {
+                                $("#output").html("tangentes interiores");
+                            } else {
+                                if (r1 * 1 > r2 * 1 + distancia * 1) {
+                                    $("#output").html("interiores");
+                                } else {
+                                    if (r1 * 1 + r2 * 1 == distancia * 1) {
+                                        $("#output").html("tangentes exteriores");
+                                    }
+                                    else {
+                                        $("#output").html("secantes");
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            });
+
+        });
+
+    </script>
+
+    <style>
+        * {
+            font-size: 100%;
+            padding: 1px;
+            margin: 1px;
+        }
+
+        h2 {
+            font-size: 200%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h6>x1</h6>
+    <input id="1-input" type="text">
+    <h6>y1</h6>
+    <input id="2-input" type="text">
+    <h6>r1</h6>
+    <input id="3-input" type="text">
+    <h6>x2</h6>
+    <input id="4-input" type="text">
+    <h6>y2</h6>
+    <input id="5-input" type="text">
+    <h6>r2</h6>
+    <input id="6-input" type="text">
+
+    <hr>
+    <button id="submit">calcular</button>
+
+    <p id="output"></p>
+</body>
+
+</html>

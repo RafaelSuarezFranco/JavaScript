@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var dia = prompt("introduce dia de la semana (1-7)");
+            if (dia=="1") {
+                $("#output").html("lunes")
+            }
+            else if (dia=="2"){
+                $("#output").html("martes")
+            }
+            else if (dia=="3"){
+                $("#output").html("miercoles")
+            }
+            else if (dia=="4"){
+                $("#output").html("jueves")
+            }
+            else if (dia=="5"){
+                $("#output").html("viernes")
+            }
+            else if (dia=="6"){
+                $("#output").html("sabado")
+            }
+            else if (dia=="7"){
+                $("#output").html("domingo")
+            }
+             else {
+                alert("día incorrecto")
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <p id="output"></p>
+</body>
+
+</html>

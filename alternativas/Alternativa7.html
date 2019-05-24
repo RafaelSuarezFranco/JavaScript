@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+            $("#submit").click(function(){
+                var base = $("#1-input").val();
+                var exp = $("#2-input").val(); 
+                var resultado = Math.pow(base,exp);
+                if (exp > 0) {
+                    $("#output").html("resultado: " + resultado);
+                }
+                else{
+                    if (exp == 0) {
+                        $("#output").html("resultado: 1");
+                    } else {
+                        $("#output").html("resultado: " + resultado);
+                    }
+                }
+            });
+
+        });
+
+    </script>
+
+<style>
+        * {font-size: 100%;
+        padding: 1px;
+        margin: 1px;}
+        h2 {font-size: 200%;}
+        </style>
+        
+</head>
+
+<body>
+    <h6>base:</h6>
+    <input id="1-input" type="text">
+    <h6>exponente:</h6>
+    <input id="2-input" type="text">
+
+    <hr>
+    <button id="submit">calcular</button>
+    <p id="output"></p>
+    </body>
+
+</html>

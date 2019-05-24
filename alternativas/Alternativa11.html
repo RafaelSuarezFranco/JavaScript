@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            $("#submit").click(function () {
+                var num1 = $("#1-input").val();
+                var num2 = $("#2-input").val();
+                var num3 = $("#3-input").val();
+
+                if ((Math.sqrt(Math.pow(num1, 2) + Math.pow(num2, 2))) == num3) {
+                    $("#output").html("rectangulo");
+                } else {
+                    if ((Math.sqrt(Math.pow(num2, 2) + Math.pow(num3, 2))) == num1) {
+                        $("#output").html("rectangulo");
+                    } else {
+                        if ((Math.sqrt(Math.pow(num1, 2) + Math.pow(num3, 2))) == num2) {
+                            $("#output").html("rectangulo");
+                        } else {
+                            if (num1 == num2 && num1 == num3) {
+                                $("#output").html("equilatero");
+                            }
+                            else {
+                                if (num3 == num2) {
+                                    $("#output").html("isosceles");
+                                } else {
+                                    if (num1 == num3) {
+                                        $("#output").html("isosceles");
+                                    } else {
+                                        if (num1 == num2) {
+                                            $("#output").html("isosceles");
+                                        }
+                                        else {
+                                            $("#output").html("escaleno");
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            });
+
+        });
+
+    </script>
+
+    <style>
+        * {
+            font-size: 100%;
+            padding: 1px;
+            margin: 1px;
+        }
+
+        h2 {
+            font-size: 200%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h6>lado 1</h6>
+    <input id="1-input" type="text">
+    <h6>lado 2</h6>
+    <input id="2-input" type="text">
+    <h6>lado 3</h6>
+    <input id="3-input" type="text">
+
+
+    <hr>
+    <button id="submit">calcular</button>
+
+    <p id="output"></p>
+</body>
+
+</html>

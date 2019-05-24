@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            var num1 = prompt("introduce dividendo");
+            var num2 = prompt("introduce divisor");
+
+            $("#dividendo").html("dividendo: " + num1);
+            $("#divisor").html("divisor: " +num2);
+
+            var division = (num1/num2);
+
+            if (num2 != 0) {
+                $("#output").html("el resultado de la división es " + division)
+            }
+            else {
+                $("#output").html("no es posible dividir entre cero")
+            }
+
+            ;
+
+        });
+
+    </script>
+
+
+</head>
+
+<body>
+    <p id="dividendo">dividendo:</p>
+    <p id="divisor">divisor:</p>
+    <p id="output"></p>
+</body>
+
+</html>

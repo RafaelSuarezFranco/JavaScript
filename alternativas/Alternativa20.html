@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var peso = prompt("introduce kilos");
+            var gramos= peso*1000
+            if (peso>=5) {
+                alert("no se pueden enviar más de 5 kilos");
+            } else {
+                var zona = prompt("Destino: América del Norte (n) américa central (c) américa del sur (s) europa (e) o asia (a)");
+                if (zona=="n") {
+                    var coste=gramos*24 // estos precios POR GRAMO son descabellados
+                } 
+                else if(zona=="c"){
+                    var coste=gramos*20
+
+                }
+                else if(zona=="s"){
+                    var coste=gramos*21
+
+                }
+                else if(zona=="e"){
+                    var coste=gramos*10
+
+                }
+                else if(zona=="a"){
+                    var coste=gramos*18
+
+                }
+                else {
+                    alert("zona incorecta")
+                }
+                $("#output").html("su paquete envío costará "+coste+" €")
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <p id="output"></p>
+</body>
+
+</html>

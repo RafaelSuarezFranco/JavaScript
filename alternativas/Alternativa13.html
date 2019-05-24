@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+            $("#submit").click(function(){
+                var dia = $("#1-input").val();
+                var mes = $("#2-input").val(); 
+                var año = $("#3-input").val(); 
+
+                if ((mes == "enero" || mes == "marzo" || mes == "mayo" || mes == "julio" || mes == "agosto" || mes == "octubre" || mes == "diciembre") && dia > 31) {
+                        $("#output").html("fecha incorrecta");                   
+                } else {
+                 if ((mes== "abril"||mes== "junio"||mes == "septiembre"||mes=="noviembre")&&dia>30) {
+                    $("#output").html("fecha incorrecta");  
+                 } else {
+                     if (mes=="febrero" &&dia>28) {
+                        $("#output").html("fecha incorrecta");  
+                     } else {
+                        $("#output").html("fecha correcta");  
+                     }
+                 }   
+                }
+
+            });
+
+        });
+
+    </script>
+
+<style>
+        * {font-size: 100%;
+        padding: 1px;
+        margin: 1px;}
+        h2 {font-size: 200%;}
+        </style>
+        
+</head>
+
+<body>
+    <h6>dia</h6>
+    <input id="1-input" type="text">
+    <h6>mes</h6>
+    <input id="2-input" type="text">
+    <h6>año</h6>
+    <input id="3-input" type="text">
+
+
+    <hr>
+    <button id="submit">calcular</button>
+    <p id="output"></p>
+    </body>
+
+</html>

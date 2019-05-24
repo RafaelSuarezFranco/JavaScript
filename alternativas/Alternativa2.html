@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            var num = prompt("introduce un número");
+            $("#message").html("número: " + num);
+
+            var comp;
+
+            if (num > 0) {
+                comp = "positivo";
+            }
+            else {
+                if (num < 0) {
+                    comp = "negativo";
+                }
+                else {
+                    comp = "cero"
+                }
+            }
+
+            $("#output").html("el número es " + comp);
+
+        });
+
+    </script>
+
+
+</head>
+
+<body>
+    <p id="message"></p>
+    <p id="output"></p>
+</body>
+
+</html>

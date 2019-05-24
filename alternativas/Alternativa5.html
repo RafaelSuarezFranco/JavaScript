@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+            $("#submit").click(function(){
+                var usu = $("#1-input").val();
+                var cont = $("#2-input").val(); 
+                if (usu == "pepe" && cont == "asdasd") {
+                    alert("ha entrado usted al sistema")
+                }
+                else{
+                    alert("error: nombre o contraseña incorrecta")
+                }
+            });
+
+        });
+
+    </script>
+
+<style>
+        * {font-size: 100%;
+        padding: 1px;
+        margin: 1px;}
+        h2 {font-size: 200%;}
+        </style>
+        
+</head>
+
+<body>
+    <h6>usuario:</h6>
+    <input id="1-input" type="text">
+    <h6>contraseña:</h6>
+    <input id="2-input" type="password">
+
+    <hr>
+    <button id="submit">entrar</button>
+    <p id="output"></p>
+    </body>
+
+</html>

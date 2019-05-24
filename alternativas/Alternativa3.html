@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            var num = prompt("introduce un número para saber si es par o impar");
+            $("#message").html("número: " + num);
+            var resto = (num % 2);
+            var resultado;
+
+            if (resto == 0) {
+                resultado = "par";
+            }
+            else {
+                resultado = "impar";
+            }
+
+            $("#output").html("el número es " + resultado);
+
+        });
+
+    </script>
+
+
+</head>
+
+<body>
+    <p id="message"></p>
+    <p id="output"></p>
+</body>
+
+</html>
