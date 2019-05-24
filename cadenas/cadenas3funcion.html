@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script>
+
+        $(document).ready(function () {
+
+            function pedir_cadena() {
+                var r = prompt("escribe cadena");
+                return r;
+            };
+
+            function pedir_caracter() {
+                var c = prompt("escribe 1 caracter");
+                while (c.length != 1) {
+                    alert("por favor, solo UN caracter");
+                    c = prompt("escribe 1 caracter");
+                }
+                return c;
+            };
+            var r = pedir_cadena();
+            var c = pedir_caracter();
+
+            var contador = 0;
+
+            for (var i = 0; i < r.length; i++) {
+                if (c == r[i]) {
+                    contador++;
+                }
+                /* else {} */
+            }
+            $("#output").html("numero de veces que aparece " + c + ": " + contador);
+            
+        });
+    </script>
+</head>
+
+<body>
+    <p id="output"></p>
+</body>
+
+</html>
